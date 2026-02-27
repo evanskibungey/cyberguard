@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import NewsCard from '@/components/NewsCard';
-import type { NewsArticle } from '@/lib/types';
+import { fetchNews } from '@/lib/fetch-news';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -48,25 +48,8 @@ const tools = [
   },
 ];
 
-async function getNews(): Promise<NewsArticle[]> {
-  try {
-    const baseUrl =
-      process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
-
-    const res = await fetch(`${baseUrl}/api/news`, {
-      next: { revalidate: 3600 },
-    });
-    if (!res.ok) return [];
-    return res.json();
-  } catch {
-    return [];
-  }
-}
-
 export default async function HomePage() {
-  const news = await getNews();
+  const news = await fetchNews();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
