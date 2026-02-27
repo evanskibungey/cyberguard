@@ -15,10 +15,12 @@ export async function fetchNews(): Promise<NewsArticle[]> {
     url.searchParams.set('apiKey', apiKey);
 
     const response = await fetch(url.toString(), {
-      next: { revalidate: 3600 },
+      cache: 'no-store', // always fetch fresh, don't freeze at build time
     });
 
     if (!response.ok) {
+      // log error status for Vercel function logs
+      console.error('[fetchNews] NewsAPI error:', response.status, await response.text().catch(() => ''));
       return [];
     }
 

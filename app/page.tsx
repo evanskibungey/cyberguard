@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from 'next/cache';
 import Link from 'next/link';
 import NewsCard from '@/components/NewsCard';
 import { fetchNews } from '@/lib/fetch-news';
@@ -49,6 +50,7 @@ const tools = [
 ];
 
 export default async function HomePage() {
+  noStore(); // always fetch news fresh on every request, never statically bake it in
   const news = await fetchNews();
 
   return (
