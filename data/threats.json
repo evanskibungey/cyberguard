@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "phishing",
+    "title": "Phishing",
+    "icon": "🎣",
+    "summary": "Deceptive emails and websites that impersonate trusted organizations to steal credentials and personal information.",
+    "description": "Phishing is one of the most prevalent cyberattacks in use today. Attackers craft convincing emails, text messages, or fake websites that appear to come from legitimate organizations — your bank, a delivery company, your employer, or a government agency. The goal is to trick you into revealing sensitive information such as passwords, credit card numbers, or Social Security numbers, or to get you to download malicious software.\n\nModern phishing attacks are highly sophisticated. Spear phishing targets specific individuals using personal information gathered from social media. Whaling attacks target senior executives. Vishing uses phone calls. Smishing uses SMS text messages. Pharming redirects DNS queries so that even correctly typed URLs lead to fake sites.\n\nPhishing attacks succeed because they exploit human psychology — creating urgency, fear, authority, or curiosity to override careful thinking. A convincing phishing email can be nearly indistinguishable from a legitimate one.",
+    "warningSigns": [
+      "Sender email domain does not exactly match the real organization (e.g., 'paypa1.com' vs 'paypal.com')",
+      "Urgent or threatening language demanding immediate action",
+      "Generic greetings like 'Dear Customer' instead of your name",
+      "Links that show a different URL when you hover over them",
+      "Requests for login credentials, passwords, or payment information via email",
+      "Unexpected attachments, especially .exe, .zip, or Office files with macros",
+      "Poor grammar and spelling (though modern AI-generated phishing may be grammatically perfect)",
+      "Reply-To address differs from the From address"
+    ],
+    "preventionTips": [
+      "Always verify the sender's full email address, not just the display name",
+      "Hover over links before clicking to see the real destination URL",
+      "Navigate to websites by typing the URL directly rather than clicking email links",
+      "Enable multi-factor authentication (MFA) on all important accounts",
+      "Use a password manager — it will not autofill credentials on fake sites",
+      "Report suspicious emails to your IT team or email provider",
+      "Keep your browser and operating system updated to patch known exploits",
+      "Use email security tools that flag suspicious messages"
+    ]
+  },
+  {
+    "slug": "malware",
+    "title": "Malware",
+    "icon": "🦠",
+    "summary": "Malicious software including viruses, trojans, and spyware designed to damage systems or steal data.",
+    "description": "Malware — short for malicious software — is any program or code created to harm, disrupt, or gain unauthorized access to computer systems. It encompasses a broad family of threats including viruses (self-replicating code that attaches to legitimate files), worms (self-propagating across networks), trojans (disguised as legitimate software), spyware (secretly monitors activity), adware (injects unwanted advertisements), rootkits (hides its presence deep in the system), and keyloggers (records every keystroke).\n\nMalware typically enters systems through phishing email attachments, malicious website downloads, infected USB drives, compromised software installers, or exploit kits that target unpatched vulnerabilities. Once installed, it may lie dormant to avoid detection, exfiltrate data to remote command-and-control servers, enlist the device in a botnet for coordinated attacks, or hold the system hostage for ransom.\n\nThe consequences range from annoying (browser redirects, pop-up ads) to catastrophic (complete data loss, financial theft, industrial sabotage). Modern malware is professionally developed, regularly updated to evade antivirus detection, and often sold as Malware-as-a-Service on dark web markets.",
+    "warningSigns": [
+      "Computer is noticeably slower than usual",
+      "Unexpected pop-up advertisements appearing on the desktop or in browsers",
+      "Browser homepage or search engine changed without your permission",
+      "New programs or toolbars you did not install",
+      "Antivirus software has been disabled and cannot be re-enabled",
+      "Files are missing, renamed, or encrypted",
+      "High network activity when you are not actively browsing",
+      "Computer crashes frequently or behaves erratically"
+    ],
+    "preventionTips": [
+      "Keep your operating system and all software up to date with security patches",
+      "Install reputable antivirus/endpoint protection software and keep it updated",
+      "Only download software from official, trusted sources",
+      "Do not open email attachments from unknown senders",
+      "Use a standard (non-administrator) account for daily computing",
+      "Enable your operating system's built-in firewall",
+      "Back up important data regularly to an offline location",
+      "Be cautious with USB drives — scan them before opening any files"
+    ]
+  },
+  {
+    "slug": "ransomware",
+    "title": "Ransomware",
+    "icon": "🔒",
+    "summary": "A type of malware that encrypts your files and demands payment in cryptocurrency to restore access.",
+    "description": "Ransomware is a category of malware that encrypts the victim's files or locks them out of their system, then demands a ransom payment — typically in cryptocurrency — for the decryption key. It has become one of the most financially devastating forms of cybercrime, costing organizations billions of dollars annually and targeting everyone from individuals to hospitals, schools, government agencies, and Fortune 500 companies.\n\nModern ransomware attacks often follow a double-extortion model: attackers not only encrypt your data but also exfiltrate it first, threatening to publish sensitive information publicly if the ransom is not paid. Triple-extortion adds DDoS attacks against the victim as additional pressure.\n\nRansomware commonly spreads through phishing emails with malicious attachments, vulnerable remote desktop protocol (RDP) connections, unpatched software vulnerabilities, and compromised credentials purchased on dark web markets. After gaining entry, attackers may spend weeks or months quietly moving through the network before triggering encryption — ensuring maximum damage and leverage.\n\nPaying the ransom does not guarantee data recovery; a significant percentage of victims who pay never receive working decryption keys, and payment funds further criminal operations.",
+    "warningSigns": [
+      "Files suddenly cannot be opened and appear renamed with unfamiliar extensions",
+      "A ransom demand note appears on the screen or desktop",
+      "Unusually high disk and CPU activity",
+      "Security software has been disabled",
+      "Network shares become inaccessible",
+      "System performance degrades dramatically over a short period",
+      "Backup files or shadow copies have been deleted",
+      "Colleagues report the same issues simultaneously — indicating network spread"
+    ],
+    "preventionTips": [
+      "Maintain regular offline backups following the 3-2-1 rule: 3 copies, 2 media types, 1 offsite",
+      "Keep all software, especially operating systems and RDP, patched and updated",
+      "Disable Remote Desktop Protocol (RDP) if not needed; use a VPN if required",
+      "Implement network segmentation to limit lateral movement",
+      "Use strong, unique passwords and enable MFA on all accounts",
+      "Restrict user privileges — employees should only access what they need",
+      "Deploy email filtering and anti-phishing tools",
+      "Create and regularly test an incident response plan"
+    ]
+  },
+  {
+    "slug": "social-engineering",
+    "title": "Social Engineering",
+    "icon": "🎭",
+    "summary": "Psychological manipulation techniques that exploit human trust and behavior to bypass security controls.",
+    "description": "Social engineering is the art of manipulating people into performing actions or divulging confidential information. Unlike technical attacks that exploit software vulnerabilities, social engineering exploits human psychology — targeting emotions like trust, fear, curiosity, urgency, authority, and reciprocity.\n\nAttackers research their targets extensively using publicly available information from LinkedIn, company websites, and social media to craft convincing scenarios. Common techniques include pretexting (creating a fabricated scenario to extract information), baiting (using curiosity or greed as a lure), quid pro quo (offering something in exchange for information), tailgating (physically following authorized personnel into secure areas), and vishing (voice phishing over phone calls).\n\nSocial engineering is effective because even technically sophisticated individuals are susceptible to psychological manipulation. Security is only as strong as its human components. Attackers understand that it is often easier to trick a person than to break encryption or exploit unpatched software.\n\nBusinesses are frequently targeted through Business Email Compromise (BEC), where attackers impersonate executives to authorize fraudulent wire transfers. These attacks alone have caused billions of dollars in losses globally.",
+    "warningSigns": [
+      "Unexpected requests for sensitive information, even from seemingly known contacts",
+      "High-pressure scenarios creating urgency or fear (act now or face consequences)",
+      "Requests to bypass normal security procedures 'just this once'",
+      "Someone claims authority they cannot easily verify",
+      "An offer that seems unusually generous or too good to be true",
+      "Unexpected phone calls from 'IT support' or 'Microsoft' claiming your system has issues",
+      "A stranger trying to follow you into a secure area",
+      "Email from a 'colleague' requesting unusual information or immediate payments"
+    ],
+    "preventionTips": [
+      "Verify identity independently — call back on a known number, not one provided in the contact",
+      "Establish clear protocols for sensitive requests like wire transfers that require multiple approvals",
+      "Train all staff regularly on social engineering tactics and red flags",
+      "Create a culture where it is safe to question unusual requests without feeling rude",
+      "Never provide credentials, even to IT staff — they should not need your password",
+      "Be skeptical of urgency — attackers rush you to prevent careful thinking",
+      "Implement strict visitor and physical access controls",
+      "Report suspicious contacts to your security team immediately"
+    ]
+  },
+  {
+    "slug": "man-in-the-middle",
+    "title": "Man-in-the-Middle",
+    "icon": "🕵️",
+    "summary": "Attacks where a third party secretly intercepts and potentially alters communication between two parties.",
+    "description": "A Man-in-the-Middle (MitM) attack occurs when an attacker secretly intercepts and relays communication between two parties who believe they are communicating directly with each other. The attacker can passively eavesdrop on the conversation, actively inject or modify data, impersonate one or both parties, and strip encryption from connections.\n\nCommon MitM attack vectors include ARP spoofing on local networks (the attacker poisons ARP tables to route traffic through their machine), rogue Wi-Fi access points (creating fake 'free Wi-Fi' hotspots in public places), DNS spoofing (redirecting domain name lookups to attacker-controlled IP addresses), SSL stripping (downgrading HTTPS connections to HTTP), and BGP hijacking (large-scale internet routing manipulation).\n\nPublic Wi-Fi networks are particularly dangerous. A rogue hotspot can be set up trivially with a smartphone, and all unencrypted traffic passing through it is fully visible to the operator. Even corporate VPNs are sometimes vulnerable if the VPN endpoint itself is compromised.\n\nThe rise of HTTPS has significantly mitigated browser-based MitM attacks by encrypting traffic and authenticating server identity via certificates, but misconfigured systems, outdated protocols, and user acceptance of certificate warnings continue to create opportunities for attackers.",
+    "warningSigns": [
+      "Unexpected SSL/TLS certificate warnings in your browser",
+      "Certificate authority is unknown or untrusted",
+      "Websites loading over HTTP when they normally use HTTPS",
+      "Being asked to accept a new certificate for a site you visit regularly",
+      "Unusually slow network performance suggesting traffic is being routed through extra hops",
+      "Unexpected disconnections or session terminations",
+      "Two-factor authentication codes being requested multiple times",
+      "Accounts showing logins from unfamiliar locations while you are active"
+    ],
+    "preventionTips": [
+      "Always use HTTPS — check for the padlock and 'https://' before entering sensitive data",
+      "Avoid using public Wi-Fi for sensitive activities — use a reputable VPN if necessary",
+      "Never ignore SSL certificate warnings — they may indicate an active attack",
+      "Enable HTTP Strict Transport Security (HSTS) on websites you operate",
+      "Use encrypted DNS (DNS over HTTPS or DNS over TLS)",
+      "Keep your device's trusted certificate store up to date",
+      "Use end-to-end encrypted messaging apps for sensitive communications",
+      "Enable certificate pinning in mobile apps where possible"
+    ]
+  },
+  {
+    "slug": "password-attacks",
+    "title": "Password Attacks",
+    "icon": "🔑",
+    "summary": "Techniques used to crack or steal passwords, including brute force, dictionary attacks, and credential stuffing.",
+    "description": "Password attacks encompass a range of techniques attackers use to gain unauthorized access to accounts by obtaining or guessing credentials. They are among the most common initial access methods because passwords remain the primary authentication mechanism for most systems.\n\nBrute force attacks try every possible combination of characters until the correct password is found. Dictionary attacks use wordlists of common passwords and their variations. Credential stuffing takes username/password pairs leaked from one breach and automatically tests them across hundreds of other services — highly effective because people reuse passwords. Password spraying tries a small number of common passwords against many accounts to avoid lockouts. Keyloggers capture passwords as users type them. Shoulder surfing is simply watching someone type their password in public.\n\nOnce attackers obtain credentials, they may sell them on dark web marketplaces, use them to access additional accounts through password reuse, or leverage them for more sophisticated attacks on corporate networks. Billions of credentials from past breaches are freely available online, making credential stuffing trivially easy to execute at scale.\n\nThe Have I Been Pwned service (haveibeenpwned.com) maintains a database of over 12 billion compromised passwords from known breaches and provides a privacy-respecting API to check if a password has been exposed.",
+    "warningSigns": [
+      "Receiving unexpected password reset emails you did not request",
+      "Account login alerts from unfamiliar locations or devices",
+      "Being locked out of your account after too many failed login attempts",
+      "Unusual activity in your accounts — messages sent, settings changed",
+      "Other accounts using the same password showing suspicious activity",
+      "Security questions have been changed without your knowledge",
+      "Unauthorized purchases or transactions",
+      "Friends or contacts receiving messages you did not send"
+    ],
+    "preventionTips": [
+      "Use a unique, strong password for every account — never reuse passwords",
+      "Use a reputable password manager to generate and store complex passwords",
+      "Enable multi-factor authentication (MFA) on all accounts that support it",
+      "Use long passphrases (20+ characters) rather than short complex passwords",
+      "Check your email at haveibeenpwned.com to see if your accounts have been breached",
+      "Change passwords immediately if you suspect a breach or receive a suspicious alert",
+      "Avoid using personal information (birthdays, names) in passwords",
+      "Be cautious when using public computers — use private/incognito mode and log out completely"
+    ]
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "category": "Email Phishing",
+    "question": "You receive an email from 'support@paypa1.com' asking you to verify your account or it will be suspended within 24 hours. What should you do?",
+    "options": [
+      "Click the link immediately to avoid account suspension",
+      "Reply to the email with your credentials to verify",
+      "Check the sender domain carefully — 'paypa1.com' uses a number '1' instead of the letter 'l', then report it as phishing",
+      "Forward the email to your contacts to warn them"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is a classic homograph/typosquatting attack. The domain 'paypa1.com' substitutes the letter 'l' with the number '1'. Always inspect the sender's full email address. Legitimate companies will never threaten immediate account suspension via email requiring emergency credential entry."
+  },
+  {
+    "id": 2,
+    "category": "Email Phishing",
+    "question": "An email arrives appearing to be from your IT department saying 'Your Office 365 password expires today. Click here to reset it.' The link shows a URL beginning with 'http://'. What is suspicious here?",
+    "options": [
+      "Nothing — IT departments regularly send password reset emails",
+      "The email is using HTTP instead of HTTPS, meaning it is not encrypted and is likely a phishing site",
+      "The deadline of 'today' sounds urgent but is normal",
+      "Office 365 passwords do expire, so this is probably legitimate"
+    ],
+    "correctIndex": 1,
+    "explanation": "Legitimate corporate IT systems and Microsoft always use HTTPS. An HTTP link for a login page is a major red flag. Additionally, urgency ('expires today') is a classic social engineering pressure tactic. Always navigate directly to known trusted URLs instead of clicking email links."
+  },
+  {
+    "id": 3,
+    "category": "Email Phishing",
+    "question": "You receive an email that passed your spam filter. The From address shows 'Amazon <orders@amazon.com>' but when you hover over the reply button, the reply-to address is 'amazon-support@free-mailer.net'. What does this indicate?",
+    "options": [
+      "Amazon uses multiple email providers, so this is normal",
+      "The Reply-To address is different from the From address — this is a spoofing technique to harvest replies on an attacker-controlled server",
+      "Free-mailer.net is a legitimate Amazon subsidiary",
+      "This means the email was forwarded by Amazon's system"
+    ],
+    "correctIndex": 1,
+    "explanation": "A mismatch between the From address and Reply-To address is a strong phishing indicator. Attackers spoof the visible From address to look legitimate but set the Reply-To to a server they control. Any reply or sensitive information you send will go to the attacker, not Amazon."
+  },
+  {
+    "id": 4,
+    "category": "Email Phishing",
+    "question": "An email claims to be from your bank and says 'We detected unusual activity on your account. To secure your account, open the attached PDF and follow the instructions.' What should you do?",
+    "options": [
+      "Open the PDF — banks regularly send secure documents by email",
+      "Do not open the attachment. Contact your bank directly using the phone number on the back of your card",
+      "Reply to the email asking for more details before opening anything",
+      "Forward it to your bank's email address first, then open it"
+    ],
+    "correctIndex": 1,
+    "explanation": "Banks never send executable or PDF instructions requiring action through unsolicited emails. Malicious PDFs can contain exploits or macro scripts. Always contact your bank through verified channels — the number on your card or the official website — not through contact details provided in the suspicious email."
+  },
+  {
+    "id": 5,
+    "category": "Email Phishing",
+    "question": "Which of the following email subject lines is MOST likely to be a phishing attempt?",
+    "options": [
+      "Your monthly account statement is ready",
+      "URGENT: Your account has been compromised — verify immediately or lose access",
+      "Newsletter: This month's security tips",
+      "Confirmation: Your recent order has shipped"
+    ],
+    "correctIndex": 1,
+    "explanation": "Extreme urgency combined with threats ('lose access') is the hallmark of phishing. Attackers create panic to make victims act without thinking. Legitimate services rarely use all-caps subjects with emergency threats and unrealistic deadlines. Always pause and verify through official channels when a message creates fear."
+  },
+  {
+    "id": 6,
+    "category": "SMS Smishing",
+    "question": "You receive a text: 'USPS: Your package (ID: 92345) could not be delivered. Confirm your address at: http://usps-delivery-update.info/track'. What should you do?",
+    "options": [
+      "Click the link — you are expecting a package",
+      "Text back asking for more details",
+      "Do not click the link. Visit USPS.com directly in your browser to check any deliveries",
+      "Call the number in the text to reschedule delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is a smishing (SMS phishing) attack. The domain 'usps-delivery-update.info' is not an official USPS domain (which would be usps.com). Fake package delivery texts are among the most common smishing campaigns. Always navigate to official websites by typing the URL yourself, never from a text message link."
+  },
+  {
+    "id": 7,
+    "category": "SMS Smishing",
+    "question": "Your bank sends you a text: 'Alert: Suspicious login detected on your account. Call us NOW at 1-800-555-0199 to secure your account.' What is the safest response?",
+    "options": [
+      "Call the number provided immediately — it is urgent",
+      "Ignore all bank texts as they are always scams",
+      "Hang up if you call and they ask for your full account number and PIN",
+      "Do not call the number in the text. Find your bank's official number on their website or your card, and call that instead"
+    ],
+    "correctIndex": 3,
+    "explanation": "Smishing attacks often provide fake phone numbers. Calling the number in the text could connect you to a fraudster impersonating your bank. Always verify by calling the number printed on the back of your debit/credit card or on the bank's official website. Never trust contact details embedded in unsolicited messages."
+  },
+  {
+    "id": 8,
+    "category": "SMS Smishing",
+    "question": "You receive a text from an unknown number: 'You have won a $500 gift card! Click to claim your prize before it expires: bit.ly/claim-prize-now'. What is this most likely?",
+    "options": [
+      "A legitimate lottery — you probably entered a sweepstakes and forgot",
+      "A smishing attack using a prize lure to get you to click a malicious link",
+      "A gift from someone who wishes to remain anonymous",
+      "A marketing message from a retailer"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unsolicited 'you've won' texts are classic smishing lures. The shortened URL hides the actual destination, which is likely a credential harvesting page or malware download. Real sweepstakes notify winners through official registered channels. If you didn't enter a contest, you cannot have won it."
+  },
+  {
+    "id": 9,
+    "category": "Fake Website Detection",
+    "question": "You want to log into your bank. You see a site that looks identical to your bank's website, but the URL bar shows 'http://secure-bankofamerica-login.com'. What should you do?",
+    "options": [
+      "Log in — the site looks correct and says 'secure' in the URL",
+      "Do not log in. The URL is not the official bank domain. Close the tab and type the official URL directly",
+      "The 'http' is fine for banking sites on home networks",
+      "Check if the site has a login form — if it does, it must be real"
+    ],
+    "correctIndex": 1,
+    "explanation": "The words 'secure' or 'bank' in a URL do not make a site legitimate — attackers use them deliberately to appear trustworthy. The actual domain here is 'secure-bankofamerica-login.com', not 'bankofamerica.com'. Always check the domain name immediately after 'https://' in the address bar."
+  },
+  {
+    "id": 10,
+    "category": "Fake Website Detection",
+    "question": "A website shows a padlock icon in the browser's address bar and uses HTTPS. Does this mean the website is safe and legitimate?",
+    "options": [
+      "Yes — HTTPS and the padlock mean the site is verified and safe",
+      "No — HTTPS only means the connection is encrypted, not that the site itself is trustworthy or not a phishing site",
+      "Yes — only banks and government sites can get HTTPS certificates",
+      "No — padlock icons can only appear on fake sites"
+    ],
+    "correctIndex": 1,
+    "explanation": "HTTPS and the padlock icon only guarantee that data is encrypted in transit between your browser and the server. They say nothing about the legitimacy of the website. Phishing sites routinely obtain free HTTPS certificates (e.g., from Let's Encrypt) to appear legitimate. Always verify the full domain name."
+  },
+  {
+    "id": 11,
+    "category": "Fake Website Detection",
+    "question": "Which of the following URLs is most likely a lookalike/phishing domain targeting PayPal?",
+    "options": [
+      "https://www.paypal.com/signin",
+      "https://paypal.com.account-verify.net/login",
+      "https://developer.paypal.com",
+      "https://paypal.com/us/home"
+    ],
+    "correctIndex": 1,
+    "explanation": "In 'paypal.com.account-verify.net', the actual domain is 'account-verify.net' — the 'paypal.com' part is merely a subdomain. This is a common trick. The real domain is always the part immediately before the first single slash (/), or before '.com/.net/.org' when reading right-to-left. Always verify the root domain."
+  },
+  {
+    "id": 12,
+    "category": "Fake Website Detection",
+    "question": "You are shopping online and find a deal that seems too good to be true. The website has no reviews, the 'About Us' page is blank, and it only accepts wire transfer payments. What should you do?",
+    "options": [
+      "Buy quickly before the deal runs out",
+      "Wire the money — wire transfers are traceable",
+      "Leave the site — these are all red flags of a scam website designed to steal money",
+      "Try a small purchase first to test the site"
+    ],
+    "correctIndex": 2,
+    "explanation": "Multiple simultaneous red flags — no reviews, empty pages, wire-transfer-only payment — strongly indicate a fraudulent site. Wire transfers are not reversible and are preferred by scammers for this reason. Credit card payments offer consumer protection. Any single one of these signs warrants caution; all three together mean avoid immediately."
+  },
+  {
+    "id": 13,
+    "category": "Social Engineering",
+    "question": "A caller claims to be from Microsoft Support and says your computer is sending virus alerts to their system. They ask you to install remote access software so they can fix it. What is happening?",
+    "options": [
+      "Microsoft proactively monitors computers and this is a legitimate service call",
+      "This is a tech support scam. Microsoft never makes unsolicited calls. Do not install any software — hang up",
+      "Install the software but watch what they do",
+      "Ask them to send an email first, then decide"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a classic tech support scam. Microsoft, Apple, and other tech companies never make unsolicited calls claiming to have detected issues on your computer. Once you grant remote access, attackers can install malware, steal files, or lock you out. Hang up immediately. These calls are always fraudulent."
+  },
+  {
+    "id": 14,
+    "category": "Social Engineering",
+    "question": "A new 'colleague' sends you a message on Slack saying they are locked out of the shared project folder and asks for your login credentials temporarily. What should you do?",
+    "options": [
+      "Share your credentials — colleagues need to help each other",
+      "Refuse. Credentials are never shared. Escalate to IT or a manager to verify identity and grant proper access",
+      "Create a temporary password and share it, then change it back later",
+      "Ask them to prove they are a colleague by sending their employee ID"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a pretexting attack — a form of social engineering where an attacker creates a plausible scenario (new colleague, locked out) to extract credentials. Credentials are personal and must never be shared. Any legitimate access issue should be handled by IT through proper channels. An attacker could have compromised your colleague's account to send this message."
+  },
+  {
+    "id": 15,
+    "category": "Social Engineering",
+    "question": "You find a USB drive in the office parking lot with a label that says 'Q4 Salary Report — Confidential'. What is the safest action?",
+    "options": [
+      "Plug it into your computer to see whose drive it is and return it",
+      "Plug it into an isolated personal computer so it cannot spread to the work network",
+      "Hand it to IT security without plugging it in anywhere",
+      "Leave it where you found it in case the owner returns"
+    ],
+    "correctIndex": 2,
+    "explanation": "This is a baiting attack — USB drives are deliberately planted with enticing labels. When plugged in, they can auto-execute malware, install keyloggers, or exfiltrate data. The label is designed to make you curious enough to plug it in. Always hand unknown storage devices to IT security unopened. Never plug in unknown USB drives."
+  }
+]
