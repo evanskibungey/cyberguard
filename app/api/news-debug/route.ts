@@ -3,8 +3,17 @@ import { NextResponse } from 'next/server';
 export async function GET() {
   const apiKey = process.env.NEWS_API_KEY;
 
+  // List all env var names visible to this function (not values)
+  const visibleEnvKeys = Object.keys(process.env).filter(
+    (k) => k.includes('API') || k.includes('KEY') || k.includes('URL')
+  );
+
   if (!apiKey || apiKey === 'your_key_here') {
-    return NextResponse.json({ error: 'NEWS_API_KEY not set', keyPresent: false });
+    return NextResponse.json({
+      error: 'NEWS_API_KEY not set or still placeholder',
+      keyPresent: false,
+      visibleEnvKeys,
+    });
   }
 
   const url = new URL('https://newsapi.org/v2/everything');
@@ -14,7 +23,7 @@ export async function GET() {
   url.searchParams.set('apiKey', apiKey);
 
   try {
-    const response = await fetch(url.toString());
+    const response = await fetch(url.toString(), { cache: 'no-store' });
     const body = await response.json();
 
     return NextResponse.json({
@@ -22,6 +31,7 @@ export async function GET() {
       keyPrefix: apiKey.slice(0, 6) + '...',
       httpStatus: response.status,
       ok: response.ok,
+      visibleEnvKeys,
       newsApiResponse: body,
     });
   } catch (err) {
@@ -29,6 +39,7 @@ export async function GET() {
       keyPresent: true,
       error: 'fetch threw an exception',
       detail: String(err),
+      visibleEnvKeys,
     });
   }
 }
