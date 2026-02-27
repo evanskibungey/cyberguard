@@ -1,8 +1,10 @@
-import { unstable_noStore as noStore } from 'next/cache';
 import Link from 'next/link';
 import NewsCard from '@/components/NewsCard';
 import { fetchNews } from '@/lib/fetch-news';
 import type { Metadata } from 'next';
+
+// Force this page to always server-render on every request (never static cache)
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'CyberGuard — Cybersecurity Awareness & Threat Detection',
@@ -50,7 +52,6 @@ const tools = [
 ];
 
 export default async function HomePage() {
-  noStore(); // always fetch news fresh on every request, never statically bake it in
   const news = await fetchNews();
 
   return (
